@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BinaryTree.h"
+#include "BinarySearchTree.h"
 
 // PERLE & AARON to do:
 
@@ -14,6 +14,9 @@ int main() {
 	_CrtDumpMemoryLeaks();
 
 	std::cout << "welcome to homemade data structs" << std::endl;
-	BinaryTree BT;
+
+	// testing my tree
+	BinarySearchTree BT;
 	BT.insert(4);
+	BT.insert(5);
 }

@@ -23,6 +23,7 @@ private:
 
 	// Private Methods
 	Node* CreateNode(int data, Node* parent=nullptr, Node* leftChild=nullptr, Node* rightChild=nullptr);
+	void PrintInOrder(Node* root);
 
 public:
 	// constructors
@@ -33,10 +34,11 @@ public:
 
 	// destructor
 	~BinarySearchTree() {
-		delete root;
+		// In order traversal to delete all the nodes
 	}
 
 	// methods
 	void insert(int data);
+	void PrintInOrder();
 };
 

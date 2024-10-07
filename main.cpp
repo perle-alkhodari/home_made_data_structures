@@ -19,4 +19,5 @@ int main() {
 	BinarySearchTree BT;
 	BT.insert(4);
 	BT.insert(5);
+	BT.PrintInOrder();
 }

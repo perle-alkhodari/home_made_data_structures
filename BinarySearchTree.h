@@ -24,11 +24,11 @@ private:
 	// Private Methods
 	Node* CreateNode(int data, Node* parent=nullptr, Node* leftChild=nullptr, Node* rightChild=nullptr);
 	void PrintInOrder(Node* root);
+	Node* GetNode(Node* root, int data);
 
 public:
 	// constructors
 	BinarySearchTree() {
-		std::cout << "binary tree created" << std::endl;
 		root = nullptr;
 	}
 
@@ -40,5 +40,6 @@ public:
 	// methods
 	void insert(int data);
 	void PrintInOrder();
+	Node* GetNode(int data);
 };
 

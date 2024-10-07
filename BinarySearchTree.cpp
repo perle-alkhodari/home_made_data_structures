@@ -17,8 +17,23 @@ void BinarySearchTree::PrintInOrder(Node* root)
 {
     if (root != nullptr) {
         PrintInOrder(root->left);
-        std::cout << root->data << " ";
+        std::cout << root->data << " " << std::endl;
         PrintInOrder(root->right);
+    }
+}
+
+Node* BinarySearchTree::GetNode(Node* root, int data)
+{
+    // if null or if found
+    if (root == nullptr || data == root->data) {
+        // either data is found, or data doesn't exist, or tree is empty.
+        return root;
+    }
+    if (data < root->data) {
+        return GetNode(root->left, data);
+    }
+    else {
+        return GetNode(root->right, data);
     }
 }
 
@@ -38,10 +53,8 @@ void BinarySearchTree::insert(int data)
 
         // while the new node has not been assigned yet
         while (newNode == nullptr) {
-            std::cout << temp->data << std::endl;
             // check data against temp
             if (data < temp->data) {
-                std::cout << "went left" << std::endl;
                 // if data is less than temp's data AND temp has no left child,
                 // then a new node may be created as the left child
                 if (temp->left == nullptr) {
@@ -65,10 +78,14 @@ void BinarySearchTree::insert(int data)
             }
         }
     }
-    std::cout << "new data added" << std::endl;
 }
 
 void BinarySearchTree::PrintInOrder()
 {
     PrintInOrder(root);
+}
+
+Node* BinarySearchTree::GetNode(int data)
+{
+    return GetNode(root, data);
 }

@@ -89,3 +89,21 @@ Node* BinarySearchTree::GetNode(int data)
 {
     return GetNode(root, data);
 }
+
+Node* BinarySearchTree::GetMinimum()
+{
+    Node* tmp = root;
+    while (tmp->left != nullptr) {
+        tmp = tmp->left;
+    }
+    return tmp;
+}
+
+Node* BinarySearchTree::GetMaximum()
+{
+    Node* tmp = root;
+    while (tmp->right != nullptr) {
+        tmp = tmp->right;
+    }
+    return tmp;
+}

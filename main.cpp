@@ -31,5 +31,10 @@ int main() {
 	std::cout << "the left child is " << left << std::endl;
 	std::string right = (q->right == nullptr) ? "null" : std::to_string(q->right->data);
 	std::cout << "the right child is " << right << std::endl;
-
+	Node* min = BT.GetMinimum();
+	std::cout << "the minimum should be -2: " << min->data << std::endl;
+	std::cout << "it's parent is 4: " << min->parent->data << std::endl;
+	Node* max = BT.GetMaximum();
+	std::cout << "the max should be 8: " << max->data << std::endl;
+	std::cout << "the parent should be 5: " << max->parent->data << std::endl;
 }

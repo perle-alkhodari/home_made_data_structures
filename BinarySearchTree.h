@@ -41,5 +41,7 @@ public:
 	void insert(int data);
 	void PrintInOrder();
 	Node* GetNode(int data);
+	Node* GetMinimum();
+	Node* GetMaximum();
 };
 
